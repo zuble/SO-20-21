@@ -1,0 +1,19 @@
+cd ..
+cd home/so
+cp -R host/echo /home/so
+cd echo 
+make
+sudo chmod +x load.sh
+sudo chmod +x unload.sh
+sudo sh load.sh echo
+gcc open-close-echo.c -o open-close
+gcc read-write-echo.c -o read-write
+./open-close
+./read-write
+sudo sh unload.sh echo
+
+rm -r  .... //delete non empty folder
+rmdir .... //delete empty folder
+mkdir .... //creates folder
+cp -R X Y //copy folder from X to Y
+pwd //shows the atual folder path
